@@ -23,3 +23,34 @@
     </div>
   </div>
 </div>
+
+<!-- A Cuisine has many foods -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Foods
+      </li>
+
+      <% @cuisine.foods.each do |food| %>
+        <li class="list-group-item">
+          <a href="/foods/<%= food.id %>">
+            <%= food.name %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/foods/<%= food.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/foods/<%= food.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_food/<%= food.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

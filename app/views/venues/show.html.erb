@@ -29,3 +29,65 @@
     </div>
   </div>
 </div>
+
+<!-- A Venue has many very_best -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Very Best
+      </li>
+
+      <% @venue.very_best.each do |very_best| %>
+        <li class="list-group-item">
+          <a href="/very_bests/<%= very_best.id %>">
+            <%= very_best.food_id %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/very_bests/<%= very_best.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/very_bests/<%= very_best.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_very_best/<%= very_best.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A Venue has many foods -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Foods
+      </li>
+
+      <% @venue.foods.each do |food| %>
+        <li class="list-group-item">
+          <a href="/foods/<%= food.id %>">
+            <%= food.name %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/foods/<%= food.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/foods/<%= food.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_food/<%= food.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
