@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Very_best resource:
+  # CREATE
+  get "/very_bests/new", :controller => "very_bests", :action => "new"
+  post "/create_very_best", :controller => "very_bests", :action => "create"
+
+  # READ
+  get "/very_bests", :controller => "very_bests", :action => "index"
+  get "/very_bests/:id", :controller => "very_bests", :action => "show"
+
+  # UPDATE
+  get "/very_bests/:id/edit", :controller => "very_bests", :action => "edit"
+  post "/update_very_best/:id", :controller => "very_bests", :action => "update"
+
+  # DELETE
+  get "/delete_very_best/:id", :controller => "very_bests", :action => "destroy"
+  #------------------------------
+
   # Routes for the Venue resource:
   # CREATE
   get "/venues/new", :controller => "venues", :action => "new"
