@@ -24,7 +24,7 @@
           Food
         </label>
 
-        <input type="text" id="food_id" name="food_id" placeholder="Food" class="form-control" value="<%= @very_best.food_id %>">
+        <%= select_tag(:food_id, options_from_collection_for_select(Food.all, :id, :name, @very_best.food_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for venue_id -->
