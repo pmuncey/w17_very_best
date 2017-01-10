@@ -9,7 +9,13 @@
       <dd><%= @food.name %></dd>
 
       <dt>Cuisine</dt>
-      <dd><%= @food.cuisine_id %></dd>
+      <dd>
+        <% if @food.cuisine.present? %>
+          <a href="/cuisines/<%= @food.cuisine_id %>">
+            <%= @food.cuisine.cuisine %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
