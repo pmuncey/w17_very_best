@@ -1,0 +1,1 @@
+{"name":"W17 Very Best","repository":"https://github.com/pmuncey/w17_very_best","env":{"CLOUDINARY_CLOUD_NAME":{"required":true},"CLOUDINARY_API_KEY":{"required":true},"CLOUDINARY_API_SECRET":{"required":true},"ROLLBAR_ACCESS_TOKEN":{"required":true}}}
