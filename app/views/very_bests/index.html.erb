@@ -18,7 +18,7 @@
       <% @very_bests.each do |very_best| %>
       <tr>
         <td><%= very_best.food.name %></td>
-        <td><%= very_best.venue_id %></td>
+        <td><%= very_best.venue.name %></td>
         <td><%= very_best.user_id %></td>
         <td>
           <a href="/very_bests/<%= very_best.id %>" class="btn btn-primary">Show</a>
