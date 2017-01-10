@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "foods#index"
   devise_for :users
   # Routes for the User resource:
   # READ
