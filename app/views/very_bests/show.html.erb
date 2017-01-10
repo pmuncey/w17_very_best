@@ -20,12 +20,14 @@
       <a href="/very_bests" class="btn btn-primary">
         Back
       </a>
-      <a href="/very_bests/<%= @very_best.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_very_best/<%= @very_best.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
+      <% if current_user == @very_best.user %>
+        <a href="/very_bests/<%= @very_best.id %>/edit" class="btn btn-warning">
+          Edit
+        </a>
+        <a href="/delete_very_best/<%= @very_best.id %>" class="btn btn-danger" rel="nofollow">
+          Delete
+        </a>
+      <% end %>
     </div>
   </div>
 </div>
